@@ -14,7 +14,7 @@ This repository contains the second attempt for the coding challenge **Next-Rep-
 ## Setup Instructions
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/syeda-tw/next-rep-2.git
 cd next-rep-2
 ```
 ### 2. Use NVM (Node Version Manager)
