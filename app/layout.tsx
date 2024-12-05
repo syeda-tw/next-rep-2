@@ -14,12 +14,10 @@ const LayoutWithSidebar = ({ children }: { children: React.ReactNode }) => {
     return <div>Loading...</div>;
   }
 
-  // If the user is not signed in, render only the page content without sidebar
   if (!user) {
     return <main>{children}</main>;
   }
 
-  // Render sidebar and main content if the user is signed in
   return (
     <SidebarProvider>
       <AppSidebar />
@@ -40,7 +38,6 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body>
-          {/* Pass the children into the LayoutWithSidebar */}
           <LayoutWithSidebar>{children}</LayoutWithSidebar>
         </body>
       </html>
