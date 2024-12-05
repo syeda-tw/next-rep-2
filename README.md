@@ -20,7 +20,7 @@ git clone <repository-url>
 cd next-rep-2
 ```
 
-### 3. Use NVM (Node Version Manager)
+### 2. Use NVM (Node Version Manager)
 To ensure you are using the LTS version of Node.js, follow these steps with NVM:
 
 - Install NVM (if not already installed) by following the instructions here.
@@ -48,7 +48,7 @@ OR
 yarn install
 ```
 
-### 3. Add Environment Variables
+### 4. Add Environment Variables
 Create a `.env.local` file in the root directory of your project and add the following keys:
 
 ```plaintext
@@ -60,7 +60,7 @@ NEXT_PUBLIC_CLERK_SIGN_UP_URL=/auth/sign-up
 
 Replace `your_clerk_publishable_key` and `your_clerk_secret_key` with the keys provided by Clerk.
 
-### 4. Run the Development Server
+### 5. Run the Development Server
 Start the development server with the following command:
 
 ```bash
