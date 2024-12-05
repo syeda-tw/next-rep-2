@@ -37,6 +37,9 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
+        <head>
+          {/* Your head content goes here (meta tags, title, etc.) */}
+        </head>
         <body>
           <LayoutWithSidebar>{children}</LayoutWithSidebar>
         </body>
