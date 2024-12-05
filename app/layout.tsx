@@ -1,17 +1,17 @@
-'use client'
+"use client";
 
 import { ClerkProvider, useUser } from "@clerk/nextjs";
 import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
+import { Progress } from "@/components/ui/progress";
 
 // This component checks user status and conditionally renders the sidebar
 const LayoutWithSidebar = ({ children }: { children: React.ReactNode }) => {
   const { isLoaded, user } = useUser(); // Get user data and loading status
 
-  // Render loading screen while Clerk is fetching user data
   if (!isLoaded) {
-    return <div>Loading...</div>;
+    return <Progress value={33} />;
   }
 
   if (!user) {
@@ -21,7 +21,7 @@ const LayoutWithSidebar = ({ children }: { children: React.ReactNode }) => {
   return (
     <SidebarProvider>
       <AppSidebar />
-      <main>
+      <main className="w-screen">
         <SidebarTrigger />
         {children}
       </main>
