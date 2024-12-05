@@ -1,17 +1,22 @@
-'use client'
+"use client";
 
-import { redirect } from 'next/navigation';
-import { useUser } from '@clerk/nextjs'; // Example: use Clerk for user data
+import { redirect } from "next/navigation";
+import { useUser } from "@clerk/nextjs"; // Example: use Clerk for user data
+import { useEffect } from "react";
 
 export default function HomePage() {
   const { isSignedIn } = useUser(); // Check if user is signed in (for example with Clerk)
 
+  useEffect(() => {
+    console.log("on the / route");
+  }, []);
+
   if (!isSignedIn) {
-    redirect('/login'); // Redirect to login page if the user is not signed in
+    redirect("/login"); // Redirect to login page if the user is not signed in
   }
 
   // If signed in, redirect to '/home'
-  redirect('/home');
+  redirect("/home");
 
-  return null; // You can also return a loading screen or null if you just want the redirect
+  return <div>example</div>; // You can also return a loading screen or null if you just want the redirect
 }
